@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Хакатоны и конференции — Code&amp;Brew</title>
+  <meta name="description" content="Хакатоны и конференции, в которых участвовала команда Code&Brew.">
+  <meta name="theme-color" content="#05060b">
+  <link rel="icon" href="assets/img/brand/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700&family=Unbounded:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body data-page="events">
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow"><b>Хронология</b> сентябрь 2025 — июнь 2026</span>
+        <h1 class="h-display" style="margin-top:28px" data-split>Хакатоны <br><span class="grad-text">и&nbsp;конференции</span></h1>
+        <div class="page-hero__row">
+          <p class="lead" data-reveal>Хакатоны — лучший тест для команды: жёсткий дедлайн, незнакомая задача и результат, который нужно показать жюри. Здесь все мероприятия, в которых Code&amp;Brew участвовала полным составом.</p>
+          <div style="display:flex;gap:clamp(24px,4vw,56px)" data-reveal>
+            <div><div class="page-hero__count" id="ev-count">00<sup>всего</sup></div></div>
+          </div>
+        </div>
+        <div class="stats" style="grid-template-columns:repeat(3,1fr);margin-top:56px">
+          <div class="stat" data-reveal><div class="stat__num" id="ev-hacks">0</div><p class="stat__label">хакатона, включая MOEX AI Hackathon</p></div>
+          <div class="stat" data-reveal><div class="stat__num" id="ev-conf">0</div><p class="stat__label">научные конференции</p></div>
+          <div class="stat" data-reveal><div class="stat__num">4</div><p class="stat__label">участника на каждом событии</p></div>
+        </div>
+      </div>
+    </section>
+    <section class="container" style="padding-bottom:clamp(96px,12vw,180px)">
+      <div class="tl" id="timeline"></div>
+    </section>
+  </main>
+
+  <script src="assets/vendor/gsap.min.js"></script>
+  <script src="assets/vendor/ScrollTrigger.min.js"></script>
+  <script src="assets/vendor/lenis.min.js"></script>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -27,7 +27,14 @@ python -m http.server 5180
 
 Затем откройте http://localhost:5180
 
-## Как опубликовать на GitHub Pages
+## Где опубликован
+
+Сайт: https://matfix-coder.github.io/code-brew/
+Репозиторий: https://github.com/MATFIX-coder/code-brew (ветка `main`, GitHub Pages из корня)
+
+Чтобы обновить сайт, закоммитьте изменения в папке `site` и выполните `git push` — GitHub Pages пересоберётся за 1–2 минуты.
+
+## Как опубликовать на GitHub Pages заново
 
 1. Создайте в организации Code-Brew-Git-Hub репозиторий, например `code-brew-git-hub.github.io` или `site`.
 2. Загрузите в него содержимое папки `site/`.

@@ -114,7 +114,7 @@
     <article class="member" data-reveal>
       <div class="member__photo">
         <img src="${m.photo}" alt="${esc(m.name)}" loading="lazy">
-        <a class="member__gh" href="https://github.com/${m.github}" target="_blank" rel="noopener">${ICON.gh}@${esc(m.github)}</a>
+        <a class="member__gh" href="https://github.com/${m.github}" target="_blank" rel="noopener" aria-label="GitHub ${esc(m.name)}">${ICON.gh}<span>@${esc(m.github)}</span></a>
       </div>
       <h3 class="member__name">${esc(m.name)}</h3>
       <a class="member__note member__tg link-u" href="https://t.me/${m.telegram}" target="_blank" rel="noopener">${ICON.tg}@${esc(m.telegram)}</a>
@@ -538,6 +538,7 @@
      Прелоадер и intro главной
      ------------------------------------------------------------------ */
   function heroIntro() {
+    window.__cbIntro = true; // флаг для 3D-модуля, если он загрузится позже события
     window.dispatchEvent(new Event('cb:intro'));
     const hero = $('.hero');
     if (!hero || !hasGsap || reduced) return;

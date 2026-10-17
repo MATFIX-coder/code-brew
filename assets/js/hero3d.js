@@ -219,8 +219,10 @@ function init() {
     renderer.setSize(w, h, false);
     camera.aspect = w / h; camera.updateProjectionMatrix();
     const mobile = w < 900;
-    layout = mobile ? { x: 0, y: 2.05, s: 0.5 } : { x: Math.min(3.4, 1.6 + w / 1000), y: 0.85, s: 0.78 };
+    layout = mobile ? { x: 0, y: -0.35, s: 1.0 } : { x: Math.min(3.4, 1.6 + w / 1000), y: 0.85, s: 0.78 };
     steamMat.uniforms.uPR.value = renderer.getPixelRatio();
+    // на телефоне сетка пола под острым углом сливается в яркую полосу — прячем её
+    grid.visible = !mobile; floorGlow.visible = !mobile;
   }
   window.addEventListener('resize', resize);
   resize();
@@ -235,6 +237,7 @@ function init() {
   let intro = 0, introTarget = 0;
   cup.scale.setScalar(0.001);
   window.addEventListener('cb:intro', () => { introTarget = 1; host.classList.add('is-in'); });
+  if (window.__cbIntro) { introTarget = 1; host.classList.add('is-in'); }
   setTimeout(() => { introTarget = 1; }, 4500); // подстраховка
 
   let visible = true;
